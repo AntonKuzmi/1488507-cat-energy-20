@@ -7,6 +7,7 @@
 </head>
 
 <body class="page-body">
+
   <header class="page-header">
 
     <div class="page-header__mobile-logo">
@@ -20,32 +21,94 @@
     <button type="button" class="page-header__burger">
       <span></span>
     </button>
-    <nav class="page-header__menu">
-      <ul class="page-header__list">
-        <li></li>
-        <li></li>
-        <li></li>
+    <nav class="nav">
+      <button class="nav__burger" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="nav__wrapper">
+      <ul class="nav__list site-list">
+        <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
+        <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="site-list__item"><a href="#">Подбор программы</a></li>
       </ul>
+      </div>
     </nav>
   </header>
 
   <main class="main-form">
-  </main>
+    <section class="select">
+      <h2 class="select__title"> Подбор программы</h2>
+      <p class="select__subtitle"> Заполните анкету и мы подберём <br> программу питания для вашего кота</p>
 
-  <footer class="page-footer">
-    <div class="page-footer__contacts">
-      <p>Приглашаем к сотрудничеству дилеров!</p>
-      <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-    </div>
+    <form class="profile" action="https://echo.htmlacademy.ru" method="post">
 
-    <div class="page-footer__map">
-    </div>
+      <fieldset class="profile__form">
+        <label>Имя:*</label>
+        <input type="text" placeholder="Барсик" required><br>
+        <label>Вес(кг):*</label>
+        <input type="text" placeholder="7" required><br>
+        <label>Возраст(лет):</label>
+        <input type="text" placeholder="7">
+      </fieldset>
 
-    <div class="page-footer__central-logo">
-      <a href="#">
-        <svg width="101" height="18"></svg>
-      </a>
-    </div>
+      <fieldset class="profile__checkbox">
+        <ul>
+          <li>
+            <label>Похудение</label>
+            <input type="checkbox" checked value="slimming">
+          </li>
+          <li>
+            <label>Набор массы</label>
+            <input type="checkbox" value="gain">
+          </li>
+          <li>
+            <label>Не знаю(нужен ваш совет)</label>
+            <input type="checkbox" value="advice">
+          </li>
+        </ul>
+      </fieldset>
+
+
+      <fieldset class="profile__contacts">
+        <legend>Контактные данные (владельца кота)</legend>
+        <label>e-mail:*</label>
+        <input type="email" placeholder="kuklachev@gmail.com" required><br>
+        <label>Телефон:*</label>
+        <input type="email" placeholder="8(960)-900-60-90" required>
+      </fieldset>
+
+      <fieldset class="comments">
+        <legend>Комментарии</legend>
+        <p><textarea name="comment" rows="5" placeholder="расскажите обо всех повадках кота"></textarea></p>
+      </fieldset>
+    </form>
+
+    <fieldset class="additional">
+      <legend>Дополнительно</legend>
+      <ul>
+        <li>
+          <label>Сахарозаменитель</label>
+          <input type="checkbox" checked value="sweetener">
+        </li>
+        <li>
+          <label>Питьевая вода</label>
+          <input type="checkbox" value="pure water">
+        </li>
+        <li>
+          <label>Молоко</label>
+          <input type="checkbox" value="milk">
+        </li>
+        <li>
+          <label>Витамины</label>
+          <input type="checkbox" value="vitamins">
+        </li>
+      </ul>
+    </fieldset>
+
+    <button class="profile-button" type="submit">Отправить заявку</button> <br>
+    <span>*__Обязательные поля</span>
+
+  </section>
 
     <div class="contacts">
       <p>Приглашаем к сотрудничеству дилеров!</p>
@@ -95,7 +158,7 @@
         </a>
       </div>
     </footer>
-
+</main>
 </body>
 
 </html>
